@@ -1,0 +1,187 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #ffe5b4;
+  color: #ff9900;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+/* Cursor personalizado */
+.cursor {
+  width: 32px;
+  height: 32px;
+  background-image: url('Cursor.png');
+  background-size: cover;
+  position: fixed;
+  pointer-events: none;
+  z-index: 1000;
+  transition: transform 0.1s ease;
+}
+
+/* Layout principal */
+.about-layout {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Imágenes decorativas */
+.mapa-imagenes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.item {
+  position: absolute;
+  text-align: center;
+  transition: transform 0.3s ease;
+  max-width: 120px;
+}
+
+.item:hover {
+  transform: scale(1.1);
+}
+
+.item span,
+.item a,
+.item a span,
+.texto-rotado {
+  text-decoration: none !important;
+}
+
+/* Texto rotado estilo retro */
+.texto-rotado {
+  display: block;
+  margin-bottom: 5px;
+  color: #cc6600;
+  font-size: 14px;
+  text-shadow: 1px 1px #fff;
+}
+
+/* Imágenes grandes */
+.imagen {
+  width: 150px;
+  height: auto;
+  filter: drop-shadow(2px 2px 0 #ffcc99);
+}
+
+/* Sección central "Sobre mí" */
+.contenedor-central.about-central {
+  position: relative;
+  z-index: 1;
+  margin: 100px auto 50px;
+  max-width: 600px;
+  background-color: #fff0cc;
+  
+  box-shadow: 0 0 0 4px #cc6600, 0 0 0 8px #ffcc99;
+  padding: 30px;
+  
+  text-align: center;
+}
+
+.nombre {
+  font-size: 28px;
+  color: #ff6600;
+  text-shadow: 2px 2px #fff0cc;
+  margin-bottom: 20px;
+}
+
+.perfil img {
+  width: 170px;
+ 
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.subtitulo {
+  font-size: 14px;
+  color: #ff9900;
+  margin-bottom: 20px;
+}
+
+.info h2 {
+  font-size: 16px;
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+
+.info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info li {
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: #cc6600;
+}
+img {
+  mix-blend-mode: multiply; 
+  /* o 'darken', 'lighten' según el caso */
+}
+
+
+/* Footer */
+.footer-redes {
+  background-color: #ffd8a8;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #ff9900;
+}
+
+.footer-titulo {
+  color: #ff6600;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.redes-contenedor {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.red-social img {
+  width: 30px;
+  transition: transform 0.3s ease;
+  filter: brightness(1.2);
+}
+
+.red-social:hover img {
+  transform: scale(1.2);
+}
+
+/* Partículas mágicas */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+/* Botón volver */
+.btn-volver {
+  display: inline-block;
+  background-color: #fff0cc;
+  color: #ff6600;
+  border: 2px solid #ff9900;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 10px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 0 #ffcc99;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-volver:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 0 #ffcc99;
+}

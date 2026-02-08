@@ -306,3 +306,10 @@ body {
   transform: scale(1.05);
   box-shadow: 3px 3px 0 #ffcc99;
 }
+
+img {
+  display: block;
+  width: 170px;
+  border-radius: 8px;
+  margin: 20px auto; /* centra horizontalmente y da margen arriba/abajo */
+}

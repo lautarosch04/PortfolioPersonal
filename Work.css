@@ -79,29 +79,55 @@ header {
 }
 
 .bocadillo {
-  background-color: #fff0cc;
-  border: 2px solid #ff9900;
-  box-shadow: 2px 2px 0 #ffcc99;
-  padding: 15px 20px;
-  max-width: 320px;
+  background-color: #fffaf0;           /* papel claro */
+  border: 3px solid #ff9900;           /* borde fuerte */
+  border-radius: 18px;
+  padding: 18px 22px;
+  max-width: 420px;
   font-size: 12px;
   color: #cc6600;
-  text-align: left;
-  line-height: 1.4;
-  border-radius: 10px;
+  text-align: center;
+  line-height: 1.5;
+
+  /* sombra tipo cómic */
+  box-shadow:
+    4px 4px 0 #ffcc99,
+    8px 8px 0 rgba(255, 153, 0, 0.2);
+
   position: relative;
-  transition: opacity 0.6s ease;
 }
 
+/* Flecha del bocadillo */
 .bocadillo::after {
   content: "";
   position: absolute;
-  bottom: -10px;
-  left: 40px;
-  border-width: 10px 10px 0;
-  border-style: solid;
-  border-color: #fff0cc transparent transparent transparent;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 18px solid #fffaf0;
 }
+
+/* Borde de la flecha */
+.bocadillo::before {
+  content: "";
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 22px solid #ff9900;
+}
+
+
 
 .avatar img {
   width: 120px;

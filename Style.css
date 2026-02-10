@@ -182,5 +182,89 @@ body {
   height: 100%;
   pointer-events: none;
   z-index: 0;
+}/* Centrar el bloque de texto y la nueva imagen */
+.contenedor-central {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10; /* Asegura que esté por encima del mapa de imágenes */
+}
+
+.nombre {
+  font-size: 28px;
+  color: #ff6600;
+  text-shadow: 2px 2px #fff0cc;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 12px;
+  color: #cc6600;
+  text-shadow: 1px 1px #fff;
+  margin-bottom: 20px; /* Espacio antes de la imagen */
+}
+
+/* Estilo para la nueva imagen del centro */
+.imagen-central-abajo {
+  width: 120px; /* Ajusta el tamaño a tu gusto */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(4px 4px 0px #cc6600); /* Efecto retro de sombra sólida */
+  transition: transform 0.3s ease;
+}
+
+.imagen-central-abajo:hover {
+  transform: scale(1.1) rotate(5deg); /* Pequeña animación al pasar el mouse */
+}
+/* --- BLOQUE CENTRAL UNIFICADO --- */
+.contenedor-central {
+  position: absolute;
+  top: 45%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px 30px 0px 30px; /* Quitamos padding inferior para que el personaje toque el borde */
+  border: 3px solid #ff9900;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 #cc6600, -4px -4px 0 #ffcc99;
+  background-color: rgba(255, 245, 204, 0.9); /* Más opaco para que se vea mejor */
+  animation: floatText 3s ease-in-out infinite alternate;
+  z-index: 50; /* Subimos el z-index para que nada lo tape */
+}
+
+/* Contenedor específico para el personaje */
+.contenedor-personaje {
+  position: relative;
+  height: 60px; /* Altura visible del hueco */
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  overflow: visible; /* PERMITE que la imagen salga de la caja si es necesario */
+}
+
+.imagen-central-abajo {
+  width: 140px; /* Un poco más grande para que destaque */
+  height: auto;
+  position: absolute;
+  bottom: -15px; /* IMPORTANTE: Esto hace que se "asome" sobre el borde inferior */
+  image-rendering: pixelated; /* Para que el Pixel Art se vea nítido */
+  filter: drop-shadow(4px 4px 0px #cc6600);
+  transition: transform 0.3s ease;
+  z-index: 51;
+}
+
+/* Efecto cuando pasas el mouse por el cuadro */
+.contenedor-central:hover .imagen-central-abajo {
+  transform: translateY(-20px); /* El personaje sube más al saludar */
+}
+
+/* --- ANIMACIONES --- */
+@keyframes floatText {
+  0% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-10px); }
+  100% { transform: translate(-50%, -50%) translateY(0); }
 }
 /* --- Estilos adicionales para tarjetas de lenguajes --- */

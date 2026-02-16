@@ -86,8 +86,8 @@ body {
 }
 
 @keyframes floatCharacter {
-  from { transform: translate(-50%, -50%) translateY(0); }
-  to   { transform: translate(-50%, -50%) translateY(-12px); }
+  from { transform: translate(-50%, -40%) translateY(0); }
+  to   { transform: translate(-50%, -40%) translateY(-12px); }
 }
 
 /* HOVER */
@@ -127,7 +127,7 @@ body {
   width: 130px;
 }
 
-/* Footer */
+/* --- FOOTER --- */
 .footer-redes {
   background-color: #ffd8a8;
   padding: 20px;

@@ -106,7 +106,7 @@ body {
   max-width: 90vw;
   z-index: 5;
   pointer-events: none;
-  margin: 0 auto;
+  margin: 60px auto 0;
 }
 
 /* La imagen del personaje */
@@ -175,7 +175,7 @@ body {
 
 /* ICONOS */
 .item-img {
-  width: 80px;
+  width: 95px;
   image-rendering: pixelated;
   filter: drop-shadow(3px 3px 0px #cc6600);
   transition: transform 0.2s ease, filter 0.2s ease;

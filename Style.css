@@ -79,7 +79,15 @@ body {
 .item--character{ top: 50%; left: 50%; transform: translate(-50%, -50%); animation-name: floatCharacter; }
 .item--social   { bottom: 4%; right: 5%; }
 
-
+/* FLOTACIÓN */
+@keyframes floatItem {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-10px); }
+}
+@keyframes floatCharacter {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-12px); }
+}
 
 /* HOVER */
 .item:hover {
@@ -88,10 +96,12 @@ body {
 
 .item--character:hover {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: floatCharacter 2s ease-in-out infinite alternate;
 }
+
 
 /* LABEL */
 .item-label {

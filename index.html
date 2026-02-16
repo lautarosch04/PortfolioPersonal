@@ -4,56 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lautaro Schmitt - Portafolio</title>
+
   <link rel="stylesheet" href="Style.css">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
+  <!-- Cursor -->
   <div class="cursor"></div>
 
-  <div class="contenedor-central">
-  <h1 class="nombre">Lautaro Schmitt</h1>
-  <p class="subtitulo">Desarrollador de aplicaciones y videojuegos</p>
-  
-  <div class="contenedor-personaje">
-    <img src="Wireframe/imagen-central-abajo.png" alt="Decoración centro" class="imagen-central-abajo">
-  </div>
-</div>
-  <main class="mapa-imagenes">
-    <a href="Work.html" class="item" style="top: 12%; left: 10%;">
-      <span class="texto-rotado" style="transform: rotate(-10deg);">Work</span>
-      <img src="Wireframe/mate1.svg" alt="Trabajos" class="imagen-item">
-    </a>
-    <a href="Study.html" class="item" style="top: 8%; left: 78%;">
-      <span class="texto-rotado" style="transform: rotate(12deg);">Study</span>
-      <img src="Wireframe/book.svg" alt="Estudios" class="imagen-item">
-    </a>
-    <a href="Proyects.html" class="item" style="top: 58%; left: 12%;">
-      <span class="texto-rotado" style="transform: rotate(-8deg);">Projects</span>
-      <img src="Wireframe/palomitas.svg" alt="Proyectos" class="imagen-item">
-    </a>
-    <a href="About.html" class="item" style="top: 55%; left: 85%;">
-      <span class="texto-rotado" style="transform: rotate(10deg);">About</span>
-      <img src="Wireframe/obeliskç.svg" alt="Sobre mi" class="imagen-item">
-    </a>
-  </main>
+  <!-- Escenario principal -->
+  <div class="hero">
 
-  <footer class="footer-redes">
-    <h2 class="footer-titulo">Mis redes</h2>
-    <div class="redes-contenedor">
-      <a href="https://github.com/lautarosch04" target="_blank" class="red-social">
-        <img src="Wireframe/Github.svg" alt="GitHub" />
-      </a>
-      <a href="https://www.linkedin.com/in/lautaro-schmitt-a683852a2/" target="_blank" class="red-social">
-        <img src="Wireframe/linkedin.svg" alt="LinkedIn" />
-      </a>
-      <a href="https://www.instagram.com/lautaroschm/" target="_blank" class="red-social">
-        <img src="Wireframe/Instagram.svg" alt="Instagram" />
-      </a>
+    <!-- Nombre gigante -->
+    <div class="hero-name-wrapper">
+      <h1 class="hero-name">Lautaro Schmitt</h1>
+      <p class="hero-sub">Desarrollador de aplicaciones y videojuegos</p>
     </div>
-  </footer>
 
+    <!-- WORK -->
+    <a href="Work.html" class="item item--work">
+      <span class="item-label">Work</span>
+      <img src="Wireframe/mate1.svg" alt="Ver trabajos" class="item-img">
+    </a>
+
+    <!-- STUDY -->
+    <a href="Study.html" class="item item--study">
+      <span class="item-label">Study</span>
+      <img src="Wireframe/book.svg" alt="Ver estudios" class="item-img">
+    </a>
+
+    <!-- PROJECTS -->
+    <a href="Projects.html" class="item item--projects">
+      <span class="item-label">Projects</span>
+      <img src="Wireframe/palomitas.svg" alt="Ver proyectos" class="item-img">
+    </a>
+
+    <!-- ABOUT -->
+    <a href="About.html" class="item item--about">
+      <span class="item-label">About</span>
+      <img src="Wireframe/obelisk.svg" alt="Sobre mí" class="item-img">
+    </a>
+
+    <!-- Personaje central -->
+    <div class="item item--character">
+      <img src="Wireframe/imagen-central-abajo.png" alt="Personaje" class="item-img item-img--char">
+    </div>
+
+    <!-- Redes -->
+    <div class="item item--social">
+      <span class="item-label">Redes</span>
+      <div class="social-icons">
+        <a href="https://github.com/lautarosch04" target="_blank" rel="noopener noreferrer" class="red-social">
+          <img src="Wireframe/Github.svg" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/lautaro-schmitt-a683852a2/" target="_blank" rel="noopener noreferrer" class="red-social">
+          <img src="Wireframe/linkedin.svg" alt="LinkedIn">
+        </a>
+        <a href="https://www.instagram.com/lautaroschm/" target="_blank" rel="noopener noreferrer" class="red-social">
+          <img src="Wireframe/Instagram.svg" alt="Instagram">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Partículas -->
   <div class="particles"></div>
+
   <script src="main.js"></script>
 </body>
 </html>

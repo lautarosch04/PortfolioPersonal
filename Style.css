@@ -12,6 +12,21 @@ body {
   cursor: none;
   overflow-x: hidden;   /* ✅ solo horizontal */
   overflow-y: auto;     /* ✅ scroll vertical */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Contenedor principal */
+.main-content {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 20px;
 }
 
 /* CURSOR */
@@ -27,28 +42,22 @@ body {
 }
 
 /* HERO */
-.hero {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* NOMBRE */
 .hero-name-wrapper {
-  position: absolute;
-  inset: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   pointer-events: none;
   z-index: 1;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 .hero-name {
-  font-size: clamp(52px, 10vw, 160px);
+  font-size: clamp(22px, 4vw, 80px);
   text-align: center;
+
   color: #ff8000;
   opacity: 0.18;
   -webkit-text-stroke: 2px #cc5500;
@@ -90,24 +99,58 @@ body {
 }
 
 /* HOVER */
-/* ===== CONTENEDOR DEL PERSONAJE ===== */
-.item--character {
-  position: absolute;
-  top: calc(50% + 30px);
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* Contenedor del personaje */
+.character {
+  position: relative;
+  width: 450px;
+  max-width: 90vw;
+  z-index: 5;
   pointer-events: none;
-  animation: none;
+  margin: 0 auto;
 }
 
-
-/* ===== IMAGEN DEL PERSONAJE ===== */
-.item-img--char {
-  width: 200px;        /* 🔥 más grande */
+/* La imagen del personaje */
+.img.char {
+  width: 100%;                /* ocupa todo el ancho del contenedor .character */
   height: auto;
-  image-rendering: pixelated;
-  filter: drop-shadow(3px 3px 0px #cc6600);
-  animation: floatCharacter 2s ease-in-out infinite alternate;
+  image-rendering: pixelated; /* mantiene el estilo pixel art nítido (muy importante) */
+  filter: 
+    drop-shadow(8px 12px 0 #cc5500)          /* sombra naranja pixelada */
+    drop-shadow(0 0 18px rgba(255, 140, 0, 0.4)); /* glow suave opcional */
+  animation: floatChar 3.8s ease-in-out infinite alternate;
+}
+
+/* Animación de flotar (opcional – puedes quitarla si no te gusta) */
+@keyframes floatChar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-28px);
+  }
+}
+
+/* Responsive – más pequeño en móviles */
+@media (max-width: 768px) {
+  .character {
+    width: 420px;           /* más razonable en pantallas chicas */
+  }
+}
+
+@media (max-width: 480px) {
+  .character {
+    width: 340px;
+  }
+}
+
+/* Animación de flotar (ajustá los valores si querés más/menos movimiento) */
+@keyframes floatCharacter {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-25px);
+  }
 }
 
 /* ===== ANIMACIÓN DE FLOTAR ===== */
@@ -147,28 +190,31 @@ body {
   width: 130px;
 }
 
-/* --- FOOTER --- */
+/* ===========================
+   FOOTER
+=========================== */
 .footer-redes {
   background-color: #ffd8a8;
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
   border-top: 2px solid #ff9900;
+  margin-top: auto;
 }
 
 .footer-titulo {
   color: #ff6600;
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .redes-contenedor {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .red-social img {
-  width: 30px;
+  width: 35px;
   transition: transform 0.3s ease;
   filter: brightness(1.2);
 }

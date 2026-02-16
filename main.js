@@ -1,11 +1,11 @@
-// Cursor personalizado
+// Custom cursor
 const cursor = document.querySelector('.cursor');
 document.addEventListener('mousemove', e => {
   cursor.style.left = `${e.clientX}px`;
   cursor.style.top = `${e.clientY}px`;
 });
 
-// Partículas mágicas estilo pixel suave
+// Magic particles soft pixel style
 const particlesContainer = document.querySelector('.particles');
 
 function createParticle(x, y) {

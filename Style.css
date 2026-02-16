@@ -79,16 +79,7 @@ body {
 .item--character{ top: 50%; left: 50%; transform: translate(-50%, -50%); animation-name: floatCharacter; }
 .item--social   { bottom: 4%; right: 5%; }
 
-/* FLOTACIÓN */
-@keyframes floatItem {
-  from { transform: translateY(0); }
-  to   { transform: translateY(-10px); }
-}
 
-@keyframes floatCharacter {
-  from { transform: translate(-50%, -40%) translateY(0); }
-  to   { transform: translate(-50%, -40%) translateY(-12px); }
-}
 
 /* HOVER */
 .item:hover {

@@ -5,13 +5,13 @@
   padding: 0;
 }
 
-/* BODY */
 body {
   font-family: 'Press Start 2P', cursive;
   background-color: #ffe5b4;
   color: #ff6600;
   cursor: none;
-  overflow: hidden;
+  overflow-x: hidden;   /* ✅ solo horizontal */
+  overflow-y: auto;     /* ✅ scroll vertical */
 }
 
 /* CURSOR */
@@ -80,6 +80,10 @@ body {
 .item--social   { bottom: 4%; right: 5%; }
 
 /* FLOTACIÓN */
+@keyframes floatCharacter {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-14px); }
+}
 @keyframes floatItem {
   from { transform: translateY(0); }
   to   { transform: translateY(-10px); }
@@ -89,16 +93,20 @@ body {
 /* ===== CONTENEDOR DEL PERSONAJE ===== */
 .item--character {
   position: absolute;
-  top: calc(50% + 30px); /* centrado + 30px abajo */
+  top: calc(50% + 30px);
   left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
+  animation: none;
 }
+
 
 /* ===== IMAGEN DEL PERSONAJE ===== */
 .item-img--char {
-  width: 160px;        /* tamaño del avatar */
+  width: 200px;        /* 🔥 más grande */
   height: auto;
+  image-rendering: pixelated;
+  filter: drop-shadow(3px 3px 0px #cc6600);
   animation: floatCharacter 2s ease-in-out infinite alternate;
 }
 

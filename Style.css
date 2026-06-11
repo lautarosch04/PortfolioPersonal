@@ -263,17 +263,19 @@ body {
 /* Mobile phones */
 @media (max-width: 480px) {
   .main-content {
-    gap: 20px;
-    padding: 30px 15px;
+    gap: 15px;
+    padding: 20px 15px;
+    flex-wrap: wrap;
   }
 
   .hero-name-wrapper {
-    margin-top: 40px;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
   }
 
   .hero-name {
-    font-size: clamp(14px, 2.5vw, 30px);
+    font-size: clamp(14px, 2.5vw, 28px);
     -webkit-text-stroke: 1px #cc5500;
   }
 
@@ -281,10 +283,28 @@ body {
     font-size: clamp(6px, 1vw, 10px);
   }
 
+  .character {
+    width: 200px;
+    margin: 15px auto 0;
+    order: 2;
+  }
+
+  .img.char {
+    filter: 
+      drop-shadow(4px 6px 0 #cc5500)
+      drop-shadow(0 0 12px rgba(255, 140, 0, 0.3));
+  }
+
   .item {
-    position: static;
+    position: relative !important;
     animation: none;
-    margin: 10px 0;
+    margin: 8px auto;
+    width: 100%;
+    max-width: 280px;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
   }
 
   .item--work,
@@ -292,24 +312,18 @@ body {
   .item--projects,
   .item--about,
   .item--social {
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    left: auto !important;
+    display: flex;
+    gap: 10px;
   }
 
   .item-img {
-    width: 50px;
+    width: 40px;
   }
 
   .item-label {
     font-size: 7px;
-    margin-bottom: 5px;
-  }
-
-  .character {
-    display: none;
+    margin-bottom: 0;
+    align-self: center;
   }
 
   .cursor {

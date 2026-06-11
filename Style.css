@@ -222,3 +222,114 @@ body {
 .red-social:hover img {
   transform: scale(1.2);
 }
+
+/* --- RESPONSIVE DESIGN --- */
+/* Tablets */
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: clamp(18px, 3vw, 50px);
+  }
+
+  .hero-sub {
+    font-size: clamp(7px, 1.2vw, 14px);
+  }
+
+  .item--work     { top: 10%;  left: 5%; }
+  .item--study    { top: 10%;  right: 5%; }
+  .item--projects { bottom: 15%; left: 5%; }
+  .item--about    { bottom: 15%; right: 5%; }
+
+  .item-img {
+    width: 70px;
+  }
+
+  .item-label {
+    font-size: 8px;
+  }
+
+  .footer-titulo {
+    font-size: 12px;
+  }
+
+  .redes-contenedor {
+    gap: 15px;
+  }
+
+  .red-social img {
+    width: 25px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .main-content {
+    gap: 20px;
+    padding: 30px 15px;
+  }
+
+  .hero-name-wrapper {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .hero-name {
+    font-size: clamp(14px, 2.5vw, 30px);
+    -webkit-text-stroke: 1px #cc5500;
+  }
+
+  .hero-sub {
+    font-size: clamp(6px, 1vw, 10px);
+  }
+
+  .item {
+    position: static;
+    animation: none;
+    margin: 10px 0;
+  }
+
+  .item--work,
+  .item--study,
+  .item--projects,
+  .item--about,
+  .item--social {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+  }
+
+  .item-img {
+    width: 50px;
+  }
+
+  .item-label {
+    font-size: 7px;
+    margin-bottom: 5px;
+  }
+
+  .character {
+    display: none;
+  }
+
+  .cursor {
+    display: none;
+  }
+
+  .footer-redes {
+    padding: 20px 15px;
+  }
+
+  .footer-titulo {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .redes-contenedor {
+    gap: 12px;
+  }
+
+  .red-social img {
+    width: 20px;
+  }
+}

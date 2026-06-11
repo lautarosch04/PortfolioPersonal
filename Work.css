@@ -301,6 +301,173 @@ header {
   z-index: 0;
 }
 
+/* --- RESPONSIVE DESIGN --- */
+/* Tablets */
+@media (max-width: 768px) {
+  header {
+    padding: 60px 15px 30px;
+    margin: 0 auto 30px;
+  }
+
+  .titulo-principal {
+    font-size: 24px;
+  }
+
+  .intro {
+    font-size: 10px;
+  }
+
+  .bocadillo {
+    max-width: 350px;
+    padding: 15px 18px;
+    font-size: 11px;
+  }
+
+  .avatar img {
+    width: 280px;
+  }
+
+  .trabajo {
+    width: 90%;
+  }
+
+  .empresa-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .empresa-info h2 {
+    font-size: 12px;
+  }
+
+  .empresa-info h3 {
+    font-size: 9px;
+  }
+
+  .trabajo p {
+    font-size: 10px;
+  }
+
+  .btn-volver {
+    font-size: 8px;
+    padding: 8px 12px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  header {
+    padding: 50px 10px 20px;
+    margin: 0 auto 20px;
+  }
+
+  .titulo-principal {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .titulo-principal::after {
+    width: 120px;
+  }
+
+  .intro {
+    font-size: 9px;
+  }
+
+  .dialogo {
+    margin-bottom: 40px;
+  }
+
+  .bocadillo {
+    max-width: 280px;
+    padding: 12px 15px;
+    font-size: 9px;
+    box-shadow: 2px 2px 0 #ffcc99, 4px 4px 0 rgba(255, 153, 0, 0.2);
+  }
+
+  .bocadillo::before {
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 16px solid #ff9900;
+    bottom: -18px;
+  }
+
+  .bocadillo::after {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 14px solid #fffaf0;
+    bottom: -14px;
+  }
+
+  .avatar img {
+    width: 180px;
+  }
+
+  .experiencia {
+    margin-bottom: 50px;
+  }
+
+  .trabajo {
+    padding: 15px 15px;
+    width: 95%;
+  }
+
+  .empresa-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .empresa-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .empresa-info {
+    text-align: center;
+  }
+
+  .empresa-info h2 {
+    font-size: 11px;
+  }
+
+  .empresa-info h3 {
+    font-size: 8px;
+  }
+
+  .trabajo p {
+    font-size: 9px;
+  }
+
+  .cursor {
+    display: none;
+  }
+
+  .btn-volver {
+    position: static;
+    display: inline-block;
+    font-size: 7px;
+    padding: 6px 10px;
+    margin-bottom: 20px;
+  }
+
+  .footer-redes {
+    padding: 20px 15px;
+  }
+
+  .footer-titulo {
+    font-size: 12px;
+  }
+
+  .redes-contenedor {
+    gap: 15px;
+  }
+
+  .red-social img {
+    width: 25px;
+  }
+}
+}
+
 /* ===========================
    RESPONSIVE
 =========================== */

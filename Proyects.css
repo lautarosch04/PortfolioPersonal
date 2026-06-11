@@ -203,6 +203,154 @@ html, body {
   transform: scale(1.2);
 }
 
+/* --- RESPONSIVE DESIGN --- */
+/* Tablets */
+@media (max-width: 768px) {
+  .projects-wrap {
+    padding: 60px 15px 80px;
+  }
+
+  .projects-header h1 {
+    font-size: 22px;
+  }
+
+  .projects-header p {
+    font-size: 10px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .project-card {
+    border: 2px solid #ffcc99;
+    box-shadow: 0 0 0 2px #cc6600, 0 0 0 4px #ffcc99;
+  }
+
+  .project-thumb {
+    height: 130px;
+  }
+
+  .project-title {
+    font-size: 12px;
+  }
+
+  .project-desc {
+    font-size: 9px;
+  }
+
+  .tag {
+    font-size: 7px;
+    padding: 3px 6px;
+  }
+
+  .btn {
+    font-size: 8px;
+    padding: 5px 8px;
+  }
+
+  .btn-volver {
+    font-size: 8px;
+    padding: 8px 12px;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .projects-wrap {
+    padding: 50px 10px 60px;
+    min-height: auto;
+  }
+
+  .projects-header {
+    margin-bottom: 40px;
+  }
+
+  .projects-header h1 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .projects-header p {
+    font-size: 9px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .project-card {
+    border: 2px solid #ffcc99;
+    box-shadow: 0 0 0 2px #cc6600;
+  }
+
+  .project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 2px #ff9900, 0 0 8px #ffcc99;
+  }
+
+  .project-thumb {
+    height: 120px;
+  }
+
+  .project-body {
+    padding: 15px;
+  }
+
+  .project-title {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .project-desc {
+    font-size: 8px;
+    margin-bottom: 12px;
+  }
+
+  .tag {
+    font-size: 6px;
+    padding: 2px 4px;
+    margin-right: 2px;
+  }
+
+  .project-cta {
+    gap: 5px;
+  }
+
+  .btn {
+    font-size: 7px;
+    padding: 4px 6px;
+  }
+
+  .btn-volver {
+    position: static;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 7px;
+    padding: 6px 10px;
+  }
+
+  .cursor {
+    display: none;
+  }
+
+  .footer-titulo {
+    font-size: 12px;
+  }
+
+  .redes-contenedor {
+    gap: 15px;
+  }
+
+  .red-social img {
+    width: 25px;
+  }
+}
+
 /* Partículas mágicas */
 .particles {
   position: fixed;

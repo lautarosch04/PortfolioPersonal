@@ -185,3 +185,147 @@ img {
   transform: scale(1.05);
   box-shadow: 3px 3px 0 #ffcc99;
 }
+
+/* --- RESPONSIVE DESIGN --- */
+/* Tablets */
+@media (max-width: 768px) {
+  .item {
+    max-width: 80px;
+  }
+
+  .imagen {
+    width: 100px;
+  }
+
+  .contenedor-central.about-central {
+    margin: 80px auto 40px;
+    padding: 20px;
+    max-width: 500px;
+  }
+
+  .nombre {
+    font-size: 22px;
+  }
+
+  .perfil img {
+    width: 130px;
+  }
+
+  .subtitulo {
+    font-size: 12px;
+  }
+
+  .info h2 {
+    font-size: 14px;
+  }
+
+  .info li {
+    font-size: 10px;
+  }
+
+  .btn-volver {
+    font-size: 8px;
+    padding: 8px 12px;
+  }
+
+  .footer-titulo {
+    font-size: 12px;
+  }
+
+  .redes-contenedor {
+    gap: 15px;
+  }
+
+  .red-social img {
+    width: 25px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .about-layout {
+    min-height: auto;
+  }
+
+  .mapa-imagenes {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .item {
+    position: static;
+    max-width: 60px;
+    margin: 10px auto;
+    display: inline-block;
+  }
+
+  .item:hover {
+    transform: scale(1.05);
+  }
+
+  .imagen {
+    width: 60px;
+  }
+
+  .contenedor-central.about-central {
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 95%;
+    box-shadow: 0 0 0 2px #cc6600, 0 0 0 4px #ffcc99;
+  }
+
+  .nombre {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .perfil img {
+    width: 100px;
+  }
+
+  .subtitulo {
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+
+  .info h2 {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .info li {
+    font-size: 9px;
+    margin-bottom: 6px;
+  }
+
+  .cursor {
+    display: none;
+  }
+
+  .btn-volver {
+    position: static;
+    display: inline-block;
+    font-size: 7px;
+    padding: 6px 10px;
+    margin-bottom: 20px;
+  }
+
+  .footer-redes {
+    padding: 20px 15px;
+  }
+
+  .footer-titulo {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .redes-contenedor {
+    gap: 12px;
+  }
+
+  .red-social img {
+    width: 20px;
+  }
+}
